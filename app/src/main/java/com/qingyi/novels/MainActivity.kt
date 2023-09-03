@@ -10,8 +10,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val webView = WebView(this)
-        webView.settings.userAgentString = "Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36"
-        webView.settings.javaScriptEnabled = true
+        webView.settings.userAgentString = "Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36" // 设置浏览器 UA 为手机
+        webView.settings.javaScriptEnabled = true // 允许执行 JavaScript
         webView.webViewClient = WebViewClient()
 
         webView.loadUrl("https://gw-novels.zeabur.app/")
