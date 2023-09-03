@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        webView.loadUrl("https://gw-novels.zeabur.app/")
+        webView.loadUrl("https://qingyi-novels.zeabur.app/")
         setContentView(webView)
     }
 
