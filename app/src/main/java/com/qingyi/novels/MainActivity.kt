@@ -1,9 +1,10 @@
 package com.qingyi.novels
 
-import android.content.Intent
-import android.net.Uri
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.View
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
@@ -11,27 +12,28 @@ import androidx.activity.ComponentActivity
 class MainActivity : ComponentActivity() {
     private lateinit var webView: WebView
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        webView = WebView(this)
-        webView.settings.userAgentString =
-            "Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36" // 设置浏览器 UA 为手机
-        webView.settings.javaScriptEnabled = true // 允许执行 JavaScript
+        webView = findViewById(R.id.webview)
+
+        // 获取 WebView 的 WebSettings 对象
+        val settings: WebSettings = webView.settings
+
+        // 启用 JavaScript 支持
+        settings.javaScriptEnabled = true
 
         webView.webViewClient = object : WebViewClient() {
+            @Deprecated("Deprecated in Java")
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-                if (url.startsWith("http://") || url.startsWith("https://")) {
-                    view.loadUrl(url)
-                } else {
-                    openInAppBrowser(url)
-                }
+                view.loadUrl(url)
                 return true
             }
         }
 
         webView.loadUrl("https://qingyi-novels.zeabur.app/")
-        setContentView(webView)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
@@ -42,9 +44,12 @@ class MainActivity : ComponentActivity() {
         return super.onKeyDown(keyCode, event)
     }
 
-    private fun openInAppBrowser(url: String) {
-        val intent = Intent(this, MainActivity::class.java)
-        intent.data = Uri.parse(url)
-        startActivity(intent)
+    fun back(view: View) {
+        webView.clearHistory()
+        webView.loadUrl("https://qingyi-novels.zeabur.app/")
+    }
+
+    fun good_author(view: View) {
+        webView.loadUrl("https://qingyi-novels.zeabur.app/excellent_author/index.html")
     }
 }
