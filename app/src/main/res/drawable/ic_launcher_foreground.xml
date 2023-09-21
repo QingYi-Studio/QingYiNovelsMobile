@@ -4,28 +4,40 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- 书页 - 左 -->
-    <path
-        android:fillColor="#FFD700"
-        android:fillType="nonZero"
-        android:pathData="M0,0L54,0,54,108,0,108z" />
+    <group
+        android:rotation="0"
+        android:pivotX="0"
+        android:pivotY="0"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:translateX="0"
+        android:translateY="0"
+        android:shape="rectangle">
 
-    <!-- 书页 - 右 -->
-    <path
-        android:fillColor="#00CED1"
-        android:fillType="nonZero"
-        android:pathData="M54,0H108V108L54,108z" />
+        <!-- 书页 - 左 -->
+        <path
+            android:fillColor="#FFD700"
+            android:fillType="nonZero"
+            android:pathData="M0,0L54,0,54,108,0,108z" />
 
-    <!-- 封面 -->
-    <path
-        android:fillColor="#FF6347"
-        android:fillType="nonZero"
-        android:pathData="M54,20L108,45V108H54z" />
+        <!-- 书页 - 右 -->
+        <path
+            android:fillColor="#00CED1"
+            android:fillType="nonZero"
+            android:pathData="M54,0H108V108L54,108z" />
 
-    <!-- 书脊 -->
-    <path
-        android:fillColor="#808080"
-        android:fillType="nonZero"
-        android:pathData="M54,0L54,108H63V0z" />
+        <!-- 封面 -->
+        <path
+            android:fillColor="#FF6347"
+            android:fillType="nonZero"
+            android:pathData="M54,20L108,45V108H54z" />
+
+        <!-- 书脊 -->
+        <path
+            android:fillColor="#808080"
+            android:fillType="nonZero"
+            android:pathData="M54,0L54,108H63V0z" />
+
+    </group>
 
 </vector>
