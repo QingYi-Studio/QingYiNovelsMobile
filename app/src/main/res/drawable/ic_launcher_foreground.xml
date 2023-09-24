@@ -20,7 +20,7 @@
         <path
             android:fillColor="#FF6347"
             android:fillType="nonZero"
-            android:pathData="M54,30L108,5V108H54z" />
+            android:pathData="M54,30L108,55V108H54z" />
 
         <!-- 书脊 -->
         <path
