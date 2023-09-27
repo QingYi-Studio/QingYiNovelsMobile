@@ -39,6 +39,14 @@
             android:visibility="visible"
             tools:visibility="visible" />
 
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="更新"
+            android:visibility="visible"
+            tools:visibility="visible"/>
+
     </LinearLayout>
 
 </LinearLayout>
