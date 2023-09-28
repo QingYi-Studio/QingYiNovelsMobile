@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">青衣小说网</string>
-    <string name="home_page">主页</string>
-    <string name="good_author">优秀作者</string>
+    <string name="home_page">Home</string>
+    <string name="good_author">Excellent author</string>
+    <string name="update">Update</string>
+    <string name="app_name">QingYi Novels</string>
 </resources>
