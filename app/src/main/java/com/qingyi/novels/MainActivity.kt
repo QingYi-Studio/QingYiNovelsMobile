@@ -26,6 +26,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        startLoad()
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private fun startLoad () {
         webView = findViewById(R.id.webview)
 
         // 获取 WebView 的 WebSettings 对象
