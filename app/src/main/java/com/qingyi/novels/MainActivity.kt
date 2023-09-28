@@ -113,8 +113,11 @@ class MainActivity : ComponentActivity() {
     }
 
     fun update(view: View) {
-        // webView.loadUrl("https://qingyi-novels.zeabur.app/download/index.html")
+        // TODO: 制作自动下载更新并自动安装
+        latest_release()
+    }
 
+    fun latest_release(){
         val link = "https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
         startActivity(intent)
