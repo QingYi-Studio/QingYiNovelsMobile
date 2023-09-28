@@ -1,6 +1,6 @@
 <resources>
     <string name="home_page">Home</string>
-    <string name="good_author">Excellent author</string>
+    <string name="good_author">Authors</string>
     <string name="update">Update</string>
     <string name="app_name">QingYi Novels</string>
 </resources>
