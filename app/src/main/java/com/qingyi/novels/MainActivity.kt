@@ -1,6 +1,8 @@
 package com.qingyi.novels
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -17,6 +19,7 @@ import com.qingyi.novels.browser.OpenInBrowser
 import com.qingyi.novels.index.MainActivity
 import java.io.*
 
+
 class MainActivity : ComponentActivity() {
 
     private lateinit var webView: WebView
@@ -24,9 +27,16 @@ class MainActivity : ComponentActivity() {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) // 加载主页
 
-        startLoad()
+        startLoad() // 启动加载项
+
+        // NotificationTest(this,intent)
+    }
+
+    private fun NotificationTest(context: Context, intent: Intent) {
+        val intent = Intent(context, NotificationReceiver::class.java)
+        context.sendBroadcast(intent)
     }
 
     @SuppressLint("SetJavaScriptEnabled")

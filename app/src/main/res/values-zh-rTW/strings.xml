@@ -4,4 +4,6 @@
     <string name="update">更新</string>
     <string name="good_author">優秀作者</string>
     <string name="home_page">主頁</string>
+    <string name="notification_title">快來看書</string>
+    <string name="notification_text">是時候開始閲讀一本好書了！</string>
 </resources>

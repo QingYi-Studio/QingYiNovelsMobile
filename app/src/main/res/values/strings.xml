@@ -4,4 +4,6 @@
     <string name="update">Update</string>
     <string name="app_name">QingYi Novels</string>
     <string name="update_link" translatable="false">https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk</string>
+    <string name="notification_title">Come on</string>
+    <string name="notification_text">Let\'s read a good and useful book!</string>
 </resources>
