@@ -1,8 +1,6 @@
 package com.qingyi.novels
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -15,6 +13,8 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.qingyi.novels.index.MainActivity
+import com.qingyi.novels.release.LatestRelease
 import java.io.*
 
 class MainActivity : ComponentActivity() {
@@ -104,22 +104,28 @@ class MainActivity : ComponentActivity() {
     }
 
     fun back(view: View) {
-        webView.clearHistory()
-        webView.loadUrl("https://qingyi-novels.zeabur.app/index.html")
+        val mainActivity = MainActivity()
+        val webView = WebView(view.context)
+        mainActivity.index(webView)
     }
 
-    fun good_author(view: View) {
+    fun author(view: View) {
         webView.loadUrl("https://qingyi-novels.zeabur.app/excellent_author/index.html")
     }
 
     fun update(view: View) {
-        // TODO: 制作自动下载更新并自动安装
-        latest_release()
+        // latest_release()
+
+        val latestRelease = LatestRelease()
+        latestRelease.update()
     }
 
     fun latest_release(){
+        /*
+        // TODO: 制作自动下载更新并自动安装
         val link = "https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-        startActivity(intent)
+        startActivity(intent) // 为什么在这里可以运行呢？我不理解
+         */
     }
 }

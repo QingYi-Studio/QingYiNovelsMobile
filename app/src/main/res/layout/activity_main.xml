@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="back_home_page"
+    android:onClick="back"
     android:orientation="vertical">
 
     <WebView
@@ -34,7 +34,7 @@
             android:id="@+id/good_author"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:onClick="good_author"
+            android:onClick="author"
             android:text="@string/good_author"
             android:visibility="visible"
             tools:visibility="visible" />
@@ -44,7 +44,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:onClick="update"
-            android:text="更新"
+            android:text="@string/update"
             android:visibility="visible"
             tools:visibility="visible" />
 
