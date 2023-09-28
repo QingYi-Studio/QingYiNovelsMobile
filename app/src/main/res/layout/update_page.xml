@@ -9,4 +9,10 @@
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/latest_version_btn"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="@string/latest_version" />
 </LinearLayout>
