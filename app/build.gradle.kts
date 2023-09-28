@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.qingyi.novels"
-        minSdk = 27
+        minSdk = 25
         targetSdk = 33
         versionCode = 1
         versionName = "1.4.0"
