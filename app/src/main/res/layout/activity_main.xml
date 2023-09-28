@@ -22,8 +22,8 @@
         android:translationZ="10dp" >
 
         <Button
-            android:id="@+id/home_page"
-            android:layout_width="100dp"
+            android:id="@+id/home_page_btn"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:onClick="back"
             android:text="@string/home_page"
@@ -31,8 +31,8 @@
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/good_author"
-            android:layout_width="100dp"
+            android:id="@+id/good_author_btn"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:onClick="author"
             android:text="@string/good_author"
@@ -41,7 +41,7 @@
 
         <Button
             android:id="@+id/update_btn"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:onClick="update"
             android:text="@string/update"
