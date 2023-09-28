@@ -3,4 +3,5 @@
     <string name="good_author">Authors</string>
     <string name="update">Update</string>
     <string name="app_name">QingYi Novels</string>
+    <string name="update_link" translatable="false">https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk</string>
 </resources>
