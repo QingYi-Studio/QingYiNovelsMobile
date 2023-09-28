@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="back_home_page"
     android:orientation="vertical">
 
     <WebView
@@ -43,7 +44,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:onClick="update"
-            android:text="@string/update"
+            android:text="更新"
             android:visibility="visible"
             tools:visibility="visible" />
 
