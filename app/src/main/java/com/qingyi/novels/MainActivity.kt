@@ -122,9 +122,7 @@ class MainActivity : ComponentActivity() {
     }
 
     fun update(view: View) {
-        OpenInBrowser(this).openWebPage(
-            context = this,
-            url = "https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk"
-        )
+        var url = "https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk"
+        OpenInBrowser(this).openWebPage(context = this, url)
     }
 }
