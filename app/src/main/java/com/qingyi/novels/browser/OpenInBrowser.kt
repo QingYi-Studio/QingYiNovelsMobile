@@ -16,20 +16,7 @@ class OpenInBrowser (private val context: Context){
     }
 
     fun openWebPage(context: Context, url: String) {
-        val webpage: Uri = Uri.parse(url)
-        val intent = Intent(Intent.ACTION_VIEW, webpage)
-        if (context.packageManager.resolveActivity(intent, 0) != null) {
-            context.startActivity(intent)
-        }
-    }
-
-    companion object {
-        fun openWebPage(context: Context, url: String) {
-            val webpage: Uri = Uri.parse(url)
-            val intent = Intent(Intent.ACTION_VIEW, webpage)
-            if (context.packageManager.resolveActivity(intent, 0) != null) {
-                context.startActivity(intent)
-            }
-        }
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        context.startActivity(intent)
     }
 }
