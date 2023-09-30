@@ -6,18 +6,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import android.webkit.ConsoleMessage
-import android.webkit.PermissionRequest
-import android.webkit.WebChromeClient
-import android.webkit.WebResourceRequest
-import android.webkit.WebSettings
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.qingyi.novels.browser.OpenInBrowser
 import com.qingyi.novels.index.MainActivity
-import java.io.*
 
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +24,7 @@ class MainActivity : ComponentActivity() {
 
         startLoad() // 启动加载项
 
-        // NotificationTest(this,intent)
+        NotificationTest(this,intent)
     }
 
     private fun NotificationTest(context: Context, intent: Intent) {
