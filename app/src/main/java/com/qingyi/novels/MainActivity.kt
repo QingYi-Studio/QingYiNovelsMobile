@@ -125,4 +125,8 @@ class MainActivity : ComponentActivity() {
         var url = "https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk"
         OpenInBrowser(this).openWebPage(context = this, url)
     }
+
+    fun dev(view: View) {
+        webView.loadUrl("https://qingyi-novels-dev.zeabur.app/index.html")
+    }
 }

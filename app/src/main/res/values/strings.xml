@@ -3,8 +3,11 @@
     <string name="good_author">Authors</string>
     <string name="update">Update</string>
     <string name="app_name">QingYi Novels</string>
-    <string name="update_link" translatable="false">https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk</string>
-    <string name="notification_title">Come on</string>
-    <string name="notification_text">Let\'s read a good and useful book!</string>
+    <string name="update_link" translatable="false">
+        https://hub.yzuu.cf/QingYi-Studio/QingYiNovelsMobile/releases/latest/download/app.apk
+    </string>
+    <string name="notification_text">You are in the developer site</string>
     <string name="version" translatable="false">1.5.1</string>
+    <string name="notification_title">Developer Site</string>
+    <string name="developer_site" translatable="false">dev</string>
 </resources>

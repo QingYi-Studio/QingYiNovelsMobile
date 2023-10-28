@@ -43,7 +43,7 @@ public class NotificationReceiver extends BroadcastReceiver {
         notificationManager.notify(NOTIFICATION_ID, notification);
 
         // 设置下一次发送通知的时间
-        setAlarm(context);
+        // setAlarm(context);
     }
 
     private void setAlarm(Context context) {
