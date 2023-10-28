@@ -4,6 +4,6 @@
     <string name="good_author">優秀作家</string>
     <string name="update">更新</string>
     <string name="app_name">青衣小說網</string>
-    <string name="notification_title">快來看書</string>
-    <string name="notification_text">是時候開始閲讀一本好書了！</string>
+    <string name="notification_title">開發者站點</string>
+    <string name="notification_text">你正在開發者站點</string>
 </resources>
