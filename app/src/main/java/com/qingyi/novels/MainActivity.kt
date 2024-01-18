@@ -3,10 +3,11 @@ package com.qingyi.novels
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.View
 import android.webkit.*
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import com.qingyi.novels.browser.OpenInBrowser
+import com.qingyi.novels.browser.UpdateApp
 import com.qingyi.novels.index.MainActivity
 
 
@@ -78,20 +79,19 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    fun back() {
+    fun back(view: View) {
         MainActivity().index(webView) // 加载初始页面
     }
 
-    fun author() {
-        webView.loadUrl("https://novels.qingyi-studio.top/excellent_author/index.html")
+    fun author(view: View) {
+        webView.loadUrl("https://novels.qingyi-studio.top/excellent_author/")
     }
 
-    fun update() {
-        val url = "https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk"
-        OpenInBrowser(this).openWebPage(context = this, url)
+    fun update(view: View) {
+        UpdateApp(context = this)
     }
 
-    fun dev() {
-        webView.loadUrl("https://qingyi-novels-dev.zeabur.app/index.html")
+    fun dev(view: View) {
+        MainActivity().dev(webView)
     }
 }
