@@ -3,7 +3,6 @@ package com.qingyi.novels
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.KeyEvent
-import android.view.View
 import android.webkit.*
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -59,7 +58,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        webView.loadUrl("https://novels.qingyi-studio.top/index.html")
+        MainActivity().index(webView) // 加载初始页面
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
@@ -79,10 +78,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    fun back(view: View) {
-        val mainActivity = MainActivity()
-        val webView = WebView(view.context)
-        mainActivity.index(webView)
+    fun back() {
+        MainActivity().index(webView) // 加载初始页面
     }
 
     fun author() {
