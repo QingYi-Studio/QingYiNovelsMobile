@@ -1,15 +1,13 @@
 package com.qingyi.novels
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.webkit.*
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import com.qingyi.novels.browser.OpenInBrowser
+import com.qingyi.novels.browser.UpdateApp
 import com.qingyi.novels.index.MainActivity
 
 
@@ -23,13 +21,6 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main) // 加载主页
 
         startLoad() // 启动加载项
-
-        NotificationTest(this,intent)
-    }
-
-    private fun NotificationTest(context: Context, intent: Intent) {
-        val intent = Intent(context, NotificationReceiver::class.java)
-        context.sendBroadcast(intent)
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -51,30 +42,7 @@ class MainActivity : ComponentActivity() {
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 return false // 允许在WebView中加载链接
             }
-
-            override fun onPageFinished(view: WebView?, url: String?) {
-                // 注入JavaScript代码，监听下载完成事件
-                view?.loadUrl("javascript:(function() { " +
-                        "var downloadLinks = document.getElementsByTagName('a');" +
-                        "for (var i = 0; i < downloadLinks.length; i++) {" +
-                        "downloadLinks[i].addEventListener('click', function(event) {" +
-                        "event.preventDefault();" + // 阻止默认点击事件
-                        "window.location.href = this.href;" + // 触发下载链接
-                        "});" +
-                        "}" +
-                        "})()")
-            }
         }
-
-        /*
-        webView.webViewClient = object : WebViewClient() {
-            @Deprecated("Deprecated in Java")
-            override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-                view.loadUrl(url)
-                return true
-            }
-        }
-        */
 
         // 设置WebChromeClient
         webView.webChromeClient = object : WebChromeClient() {
@@ -91,7 +59,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        webView.loadUrl("https://qingyi-novels.zeabur.app/index.html")
+        MainActivity().index(webView) // 加载初始页面
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
@@ -112,18 +80,19 @@ class MainActivity : ComponentActivity() {
     }
 
     fun back(view: View) {
-        val mainActivity = MainActivity()
-        val webView = WebView(view.context)
-        mainActivity.index(webView)
+        MainActivity().index(webView) // 加载初始页面
     }
 
     fun author(view: View) {
-        webView.loadUrl("https://qingyi-novels.zeabur.app/excellent_author/index.html")
+        webView.loadUrl("https://novels.qingyi-studio.top/excellent_author/")
     }
 
     fun update(view: View) {
-        var url = "https://hub.yzuu.cf/Grey-Wind/QingYiNovelsMobile/releases/latest/download/app.apk"
-        OpenInBrowser(this).openWebPage(context = this, url)
+        UpdateApp(context = this)
+    }
+
+    fun dev(view: View) {
+        MainActivity().dev(webView)
     }
 
     fun dev(view: View) {
