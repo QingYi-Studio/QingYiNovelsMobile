@@ -94,4 +94,8 @@ class MainActivity : ComponentActivity() {
     fun dev(view: View) {
         MainActivity().dev(webView)
     }
+
+    fun dev(view: View) {
+        webView.loadUrl("https://qingyi-novels-dev.zeabur.app/index.html")
+    }
 }
